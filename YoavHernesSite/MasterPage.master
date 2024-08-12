@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>המסביר לנגן</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <header>
+        <section id="HeaderTop">
+            <section id="UserDisplay">
+                <%=Session["uMsg"] %>
+                
+            </section>
+
+        </section>
+
+        <section id="HeaderMiddle">
+            <section id="SiteName">
+<img src="App_Image/WhatsApp%20Image%202022-05-29%20at%2011.28.33%20PM.jpeg" height="100" />
+
+            </section>
+
+        </section>
+        <nav id="MainNav">
+            <a href="Home.aspx">בית</a>
+            <a href="About.aspx">עלינו</a>
+            <a href="Registration.aspx">הרשמה</a>
+            <a href="Notes.aspx">הכר את התווים</a>
+            <a href="Chords.aspx">מהם אקורדים?</a>
+            <a href="CAGED.aspx">CAGED</a>
+            <a href="playing.aspx">מה תנגן היום?</a>
+
+
+
+        </nav>
+    </header>
+  
+    <section id="center">
+        <aside>
+            
+        </aside>
+        <main>
+             <h1>
+                 <asp:ContentPlaceHolder id="ContentPlaceHolderMainHeadline" runat="server">
+                 </asp:ContentPlaceHolder>
+             </h1>   
+             <asp:ContentPlaceHolder id="ContentPlaceHolderMain" runat="server">
+             </asp:ContentPlaceHolder>
+        </main>
+
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
